@@ -6,8 +6,6 @@ if (process.env.NODE_ENV !== "production") {
 var apiKey = `${process.env.benchmark_email_api_token}`;
 module.exports = {
   getAuthMc: (req, res) => {
-    let rpn = require("request-promise-native");
-
     var options = {
       url: process.env.mc_oauth2_code_request_url,
       qs: {
